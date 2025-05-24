@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Arts by FnB - Handmade Gifts">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tangerine:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/jpg" href="Screenshot_2024-10-27-00-27-26-34_e2d5b3f32b79de1d45acd1fad96fbb0f.jpg">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tangerine&display=swap"
+        rel="stylesheet">
+
+    <title>Arts by FnB</title>
+</head>
+
+<body>
+    <div class="cursor"></div>
+
+    <button class="nav-toggle" aria-label="Open navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <section class="parallax" id="home">
+        <div class="container" id="box">
+            <div class="item item5" id="box5">
+                <ul class="menu">
+                    <li><a href="javascript:void(0)" onclick="scrollToSection('home')">HOME</a></li>
+                    <li><a href="javascript:void(0)" onclick="scrollToSection('page1')">ABOUT</a></li>
+                    <li><a href="javascript:void(0)" onclick="scrollToSection('products')">PRODUCTS</a></li>
+                    <li><a href="https://www.instagram.com/arts.by.fnb/" target="_blank">INSTAGRAM</a></li>
+                </ul>
+            </div>
+
+            <div class="item item5-mobile hide" id="box5Mob">
+                <ul class="menu">
+                    <li class="menuBtn">
+                        <button id="menuBtn">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                fill="#000000">
+                                <path
+                                    d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                            </svg>
+                        </button>
+                    </li>
+                    <li><button onclick="gotoHomePage()">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                fill="#000">
+                                <path
+                                    d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z" />
+                            </svg></button></li>
+
+                    <li><button>
+                            <a href="https://www.instagram.com/arts.by.fnb/" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="instagram">
+                                    <path
+                                        d="M17.34,5.46h0a1.2,1.2,0,1,0,1.2,1.2A1.2,1.2,0,0,0,17.34,5.46Zm4.6,2.42a7.59,7.59,0,0,0-.46-2.43,4.94,4.94,0,0,0-1.16-1.77,4.7,4.7,0,0,0-1.77-1.15,7.3,7.3,0,0,0-2.43-.47C15.06,2,14.72,2,12,2s-3.06,0-4.12.06a7.3,7.3,0,0,0-2.43.47A4.78,4.78,0,0,0,3.68,3.68,4.7,4.7,0,0,0,2.53,5.45a7.3,7.3,0,0,0-.47,2.43C2,8.94,2,9.28,2,12s0,3.06.06,4.12a7.3,7.3,0,0,0,.47,2.43,4.7,4.7,0,0,0,1.15,1.77,4.78,4.78,0,0,0,1.77,1.15,7.3,7.3,0,0,0,2.43.47C8.94,22,9.28,22,12,22s3.06,0,4.12-.06a7.3,7.3,0,0,0,2.43-.47,4.7,4.7,0,0,0,1.77-1.15,4.85,4.85,0,0,0,1.16-1.77,7.59,7.59,0,0,0,.46-2.43c0-1.06.06-1.4.06-4.12S22,8.94,21.94,7.88ZM20.14,16a5.61,5.61,0,0,1-.34,1.86,3.06,3.06,0,0,1-.75,1.15,3.19,3.19,0,0,1-1.15.75,5.61,5.61,0,0,1-1.86.34c-1,.05-1.37.06-4,.06s-3,0-4-.06A5.73,5.73,0,0,1,6.1,19.8,3.27,3.27,0,0,1,5,19.05a3,3,0,0,1-.74-1.15A5.54,5.54,0,0,1,3.86,16c0-1-.06-1.37-.06-4s0-3,.06-4A5.54,5.54,0,0,1,4.21,6.1,3,3,0,0,1,5,5,3.14,3.14,0,0,1,6.1,4.2,5.73,5.73,0,0,1,8,3.86c1,0,1.37-.06,4-.06s3,0,4,.06a5.61,5.61,0,0,1,1.86.34A3.06,3.06,0,0,1,19.05,5,3.06,3.06,0,0,1,19.8,6.1,5.61,5.61,0,0,1,20.14,8c.05,1,.06,1.37.06,4S20.19,15,20.14,16ZM12,6.87A5.13,5.13,0,1,0,17.14,12,5.12,5.12,0,0,0,12,6.87Zm0,8.46A3.33,3.33,0,1,1,15.33,12,3.33,3.33,0,0,1,12,15.33Z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </button></li>
+                    <li><button value="products">
+                            <a href="#products"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                                    viewBox="0 -960 960 960" width="24px" fill="#000000">
+                                    <path
+                                        d="M240-80q-33 0-56.5-23.5T160-160v-480q0-33 23.5-56.5T240-720h80q0-66 47-113t113-47q66 0 113 47t47 113h80q33 0 56.5 23.5T800-640v480q0 33-23.5 56.5T720-80H240Zm0-80h480v-480h-80v80q0 17-11.5 28.5T600-520q-17 0-28.5-11.5T560-560v-80H400v80q0 17-11.5 28.5T360-520q-17 0-28.5-11.5T320-560v-80h-80v480Zm160-560h160q0-33-23.5-56.5T480-800q-33 0-56.5 23.5T400-720ZM240-160v-480 480Z" />
+                                </svg></a>
+                        </button></li>
+                    <li><button id="themeToggleBtn">
+                            <svg calxmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path
+                                    d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z" />
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                fill="#000">
+                                <path
+                                    d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z" />
+                            </svg>
+                        </button>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="item item2" id="box2">
+                <h2 id="artsbyfnb" class="artsbyfnb reveal-left">ArtsByFnB</h2>
+                <button class="shopNowBtn" aria-label="Shop Now"><a href="#products">Shop Handmade Gifts</a></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="sec" id="page1">
+        <div class="welcome">
+            <h2>Welcome</h2>
+        </div>
+        <img src="images/AestFlora-2.png" alt="Craft Decor" id="decor3">
+
+        <div class="craft-gallery aesthetic-gallery">
+        </div>
+        <div class="intro-data">
+            <div class="logo-container"><img
+                    src="images/Screenshot_2024-10-27-00-27-26-34_e2d5b3f32b79de1d45acd1fad96fbb0f.jpg" alt="Logo"
+                    class="LogoInSec">
+            </div>
+            <div class="notes aesthetic-notes">
+                <p class="split">"We're Bhavya and Fizzah, students with a passion for handmade crafts. We've embarked
+                    on this
+                    exciting
+                    journey
+                    to bring you unique, handcrafted pieces that we create with love and care. Follow our story as we
+                    explore,
+                    learn and share our craft with you!"</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="products" id="products">
+        <h2 class="productsSection">Products</h2>
+        <p class="quote">Find the perfect gift to celebrate your special moments with your special one..</p>
+        <div class="product-showcase">
+            <div class="main-product-card">
+
+            </div>
+            <div class="product-slider">
+
+            </div>
+            <div class="slider-nav">
+                <button class="slider-btn" id="prevBtn">←</button>
+                <button class="slider-btn" id="nextBtn">→</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews special" id="reviews">
+        <h1>Our Satisfied Customers</h1>
+        <p class="quote">Hear what our happy customers have to say about our handmade gifts!</p>
+        <button class="review-btn" onclick="scrollToSection('products')">
+            Let yourself be heard!
+        </button>
+        <div class="reviews-container">
+            <div class="review-card">
+                <div class="review-content">
+                    <p class="review-text">"I ordered a personalized album for my friend's birthday, and it was
+                        absolutely stunning! The attention to detail and craftsmanship are top-notch. Highly recommend!"
+                    </p>
+                    <p class="reviewer-name">- Priya Sharma</p>
+                </div>
+                <div class="review-image">
+                    <img src="images/Aest1.jpg" alt="Customer Review">
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-content">
+                    <p class="review-text">"The message jar I received was a delightful surprise! Each note was
+                        beautifully
+                        crafted, and it made my day. Thank you for such a thoughtful gift!"</p>
+                    <p class="reviewer-name">- Anjali Verma</p>
+                </div>
+                <div class="review-image">
+                    <img src="images/Aest1.jpg" alt="Customer Review">
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-content">
+                    <p class="review-text">"I can't express how much I love the phone case I ordered! It's unique and
+                        beautifully designed. I've received so many compliments!"</p>
+                    <p class="reviewer-name">- Riya Mehta</p>
+                </div>
+                <div class="review-image">
+                    <img src="images/Aest1.jpg" alt="Customer Review">
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-content">
+                    <p class="review-text">"The mini album I received was a perfect gift for my sister. The quality is
+                        exceptional, and the design is so cute! Thank you for your amazing work!"</p>
+                    <p class="reviewer-name">- Neha Gupta</p>
+                </div>
+                <div class="review-image">
+                    <img src="images/Aest1.jpg" alt="Customer Review">
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-content">
+                    <p class="review-text">"I ordered a personalized album for my friend's birthday, and it was
+                        absolutely
+                        stunning! The attention to detail and craftsmanship are top-notch. Highly recommend!"</p>
+                    <p class="reviewer-name">- Priya Sharma</p>
+                </div>
+                <div class="review-image">
+                    <img src="images/Aest1.jpg" alt="Customer Review">
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-content">
+                    <p class="review-text">"The message jar I received was a delightful surprise! Each note was
+                        beautifully
+                        crafted, and it made my day. Thank you for such a thoughtful gift!"</p>
+                    <p class="reviewer-name">- Anjali Verma</p>
+                </div>
+                <div class="review-image">
+                    <img src="images/Aest1.jpg" alt="Customer Review">
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-content">
+                    <p class="review-text">"I can't express how much I love the phone case I ordered! It's unique and
+                        beautifully designed. I've received so many compliments!"</p>
+                    <p class="reviewer-name">- Riya Mehta</p>
+                </div>
+                <div class="review-image">
+                    <img src="images/Aest1.jpg" alt="Customer Review">
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-content">
+                    <p class="review-text">"The mini album I received was a perfect gift for my sister. The quality is
+                        exceptional, and the design is so cute! Thank you for your amazing work!"</p>
+                    <p class="reviewer-name">- Neha Gupta</p>
+                </div>
+                <div class="review-image">
+                    <img src="images/Aest1.jpg" alt="Customer Review">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faqs" id="faqs">
+        <div class="faqs-container">
+            <div class="faqs-heading">
+                <h2>Crafting Answers to Your Questions.</h2>
+                <p class="subtitle">Everything you need to know about our handmade creations...</p>
+            </div>
+
+            <div class="faqs-list">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>How do I place an order?</span>
+                        <svg class="arrow" viewBox="0 0 24 24">
+                            <path d="M7 10l5 5 5-5z" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>All orders are handled through our Instagram page. Simply click the "Order Now" button on any
+                            product, and you'll be redirected to our Instagram DMs to complete your purchase.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>What payment methods do you accept?</span>
+                        <svg class="arrow" viewBox="0 0 24 24">
+                            <path d="M7 10l5 5 5-5z" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            We accept various payment methods, including UPI, bank transfers, and cash on delivery.
+                            Please check our Instagram page for the most up-to-date payment options.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>How long does shipping take?</span>
+                        <svg class="arrow" viewBox="0 0 24 24">
+                            <path d="M7 10l5 5 5-5z" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Shipping times vary based on your location and the type of product. Typically, orders are
+                            shipped within 3-5 business days. You can track your order through our Instagram page.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Can I customize my order?</span>
+                        <svg class="arrow" viewBox="0 0 24 24">
+                            <path d="M7 10l5 5 5-5z" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Yes! We offer customization options for many of our products. Please reach out to us via
+                            Instagram DMs to discuss your ideas and preferences.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>What if I receive a damaged product?</span>
+                        <svg class="arrow" viewBox="0 0 24 24">
+                            <path d="M7 10l5 5 5-5z" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            We take great care in packaging our products, but if you do receive a damaged item, please
+                            contact us within 48 hours of delivery. We'll work with you to resolve the issue.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Can I pick up my order in person?</span>
+                        <svg class="arrow" viewBox="0 0 24 24">
+                            <path d="M7 10l5 5 5-5z" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Yes, we offer local pickup options for customers in our area. Please contact us via
+                            Instagram DMs to arrange a pickup time and location.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>How can I contact you for more questions?</span>
+                        <svg class="arrow" viewBox="0 0 24 24">
+                            <path d="M7 10l5 5 5-5z" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            You can reach us through our Instagram DMs for any additional questions or inquiries. We're
+                            always happy to help!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h3>EXPLORE</h3>
+                    <ul>
+                        <li><a href="#home" class="f-text">Home</a></li>
+                        <li><a href="#products" class="f-text">Products</a></li>
+                        <li><a href="#page1" class="f-text">About Us</a></li>
+                        <li><a href="#faqs" class="f-text">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>FOLLOW US</h3>
+                    <ul>
+                        <li><a href="https://www.instagram.com/arts.by.fnb/" target="_blank"
+                                class="f-text">Instagram</a></li>
+                        <li><a href="#products" class="f-text">Facebook</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>CONTACT US</h3>
+                    <ul>
+                        <li><a href="" class="f-text">artsbyfnb@gmail.com</a></li>
+                        <li><a href="#products" class="f-text">+91 99999 99999</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-brand-details">
+                <div class="brand-logo">
+                    <img src="images/Screenshot_2024-10-27-00-27-26-34_e2d5b3f32b79de1d45acd1fad96fbb0f.jpg" alt="Logo"
+                        width="120px">
+                </div>
+                <div class="brand-name">
+                    <h2>ArtsByFnB</h2>
+                    <p>&copy; 2025 <span>ArtsByFnB</span>, All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+        <div class="feedback">
+            <div class="feedcard">
+                <span class="card__title">Share Your Thoughts</span>
+                <p class="card__content">
+                    We'd love to hear from you! Your feedback helps us create better handcrafted experiences. Share your
+                    stories, suggestions, or just say "hello!".
+                </p>
+                <form class="card__form">
+                    <input type="email" required placeholder="Your email" id="email">
+                    <input required type="text" placeholder="Your message" id="message">
+                    <button type="submit" class="card__button" onclick="sendEmail()">Send Message</button>
+                </form>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "Hv_FXC-UF7CW3vAYB",
+            });
+        })();
+    </script>
+</body>
+</html>
