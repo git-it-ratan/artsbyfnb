@@ -1,7 +1,7 @@
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(SplitText);
 
-window.addEventListener('onload', function() {
+window.addEventListener('onload', function () {
     nav.classList.add("nav-visible");
 });
 
@@ -146,23 +146,9 @@ document.fonts.ready.then(() => {
     });
 });
 
-document.querySelectorAll(".orderBtn").forEach(button => {
-    button.addEventListener("click", function () {
-        let productName = this.getAttribute("data-product");
-        sendMessage(productName);
-    });
-});
 
-function sendMessage(productName) {
-    let username = "arts.by.fnb";
-    let message = `Hey! I want to buy ${productName}`;
-    let encodedMessage = encodeURIComponent(message);
-    let instaLink = `https://www.instagram.com/direct/t/17847653325279516/?text=${encodedMessage}`;
 
-    window.open(instaLink, "_blank");
-}
-
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
     nav.classList.add("nav-visible");
 });
 
@@ -307,7 +293,12 @@ function updateMainProduct(product) {
     if (mainDesc) mainDesc.textContent = product.description;
     if (mainPrice) mainPrice.textContent = product.price;
     if (orderBtn) orderBtn.setAttribute("data-product", product.name);
+    orderBtn.addEventListener("click", function () {
+        let productName = this.getAttribute("data-product");
+        sendMessage(productName);
+    });
 }
+
 
 function updateActiveThumb(selectedThumb) {
     document.querySelectorAll('.product-thumb').forEach(thumb => {
@@ -338,6 +329,15 @@ function initializeSliderControls() {
             });
         });
     }
+}
+
+function sendMessage(productName) {
+    let username = "arts.by.fnb";
+    let message = `Hey! I want to buy ${productName}`;
+    let encodedMessage = encodeURIComponent(message);
+    let instaLink = `https://www.instagram.com/direct/t/17847653325279516/?text=${encodedMessage}`;
+
+    window.open(instaLink, "_blank");
 }
 
 function initReviewsAnimation() {
