@@ -207,49 +207,49 @@ window.addEventListener('load', function() {
 const products = [
     {
         name: 'Mini Album',
-        image: './images/Mini album.jpg',
+        image: 'images/Mini album.jpg',
         description: 'A compact and charming photo album perfect for preserving your cherished memories. Handcrafted with love, this mini album features decorative elements and space for your favorite snapshots.',
         price: '500₹'
     },
     {
         name: 'Large Album',
-        image: './images/Large album.jpg',
+        image: 'images/Large album.jpg',
         description: 'Our signature photo album with ample space for all your precious moments. Beautifully designed with premium materials and intricate details, this album becomes a treasured keepsake for generations.',
         price: '1000₹'
     },
     {
         name: 'Handwritten Letter',
-        image: './images/Handwritten letter.jpg',
+        image: 'images/Handwritten letter.jpg',
         description: 'Express your feelings with our beautifully crafted handwritten letters. Each letter is personally penned with elegant calligraphy and decorated with artistic touches to make your message truly special.',
         price: '200₹'
     },
     {
         name: 'Phone Case',
-        image: './images/Phone case.jpg',
+        image: 'images/Phone case.jpg',
         description: 'Protect your phone in style with our customized phone cases. Each case features unique handcrafted designs and durable protection while adding a personal touch to your device.',
         price: '800₹'
     },
     {
         name: 'Small Frame',
-        image: './images/Small frame.jpg',
+        image: 'images/Small frame.jpg',
         description: 'Elegant handcrafted frames perfect for displaying your favorite moments. Each frame is carefully decorated with intricate details to complement your cherished photos or artwork.',
         price: '300₹'
     },
     {
         name: 'Message Jars',
-        image: './images/Message jars.jpg',
+        image: 'images/Message jars.jpg',
         description: 'A collection of heartfelt messages in a beautifully decorated jar. Each jar contains handwritten notes of love, inspiration, or gratitude, making it a perfect gift for someone special.',
         price: '400₹'
     },
     {
         name: 'Polaroid Hamper',
-        image: './images/Polaroid Hamper.jpg',
+        image: 'images/Polaroid Hamper.jpg',
         description: 'A luxurious gift hamper featuring instant photos and handcrafted decorative elements. This premium collection includes customized polaroids arranged in an aesthetically pleasing presentation.',
         price: '1500₹'
     },
     {
         name: 'BookMark',
-        image: './images/BookMark.jpg',
+        image: 'images/BookMark.jpg',
         description: 'Handcrafted bookmarks that add a touch of elegance to your reading experience. Each bookmark is uniquely designed with artistic elements and durable materials for long-lasting use.',
         price: '100₹'
     }
