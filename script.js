@@ -1,10 +1,6 @@
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(SplitText);
 
-window.addEventListener('onload', function () {
-    nav.classList.add("nav-visible");
-});
-
 let sections = document.querySelectorAll("section");
 const homepage = document.querySelector(".parallax");
 let box1 = document.getElementById("box1");
@@ -150,6 +146,7 @@ document.fonts.ready.then(() => {
 
 window.addEventListener('load', function () {
     nav.classList.add("nav-visible");
+    gotoHomePage();
 });
 
 
