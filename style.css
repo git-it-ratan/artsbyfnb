@@ -688,7 +688,33 @@ section:not(.parallax) {
     height: 500px;
     object-fit: cover;
     border-radius: 15px;
-    /* margin-bottom: 1rem; */
+    margin-bottom: 1rem;
+}
+
+.product-image-slider {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.slider-controls {
+    width: 500px;
+    height: 35px;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.slider-controls button {
+    background-color: var(--hilyt-color);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--text-color);
 }
 
 .main-product-card .product-info {
@@ -1920,7 +1946,7 @@ footer {
     }
 
     .welcome h2 {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     .sec #decor3 {
@@ -1928,12 +1954,12 @@ footer {
     }
 
     .intro-data {
-        height: 550px;
         flex-direction: column;
+        gap: 2px;
     }
 
     .logo-container {
-        height: 250px;
+        height: 100%;
     }
 
     .sec .LogoInSec {
@@ -1941,11 +1967,14 @@ footer {
     }
 
     .sec .notes {
-        height: 250px;
+        width: 100%;
+        height: 100%;
+        display: flex;
     }
 
     .notes p {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
+        text-align: center;
     }
 
     /* products section */
@@ -1981,6 +2010,23 @@ footer {
         width: 100%;
         height: 100%;
     }
+
+    .slider-controls {
+        width: calc(100% - 24px);
+        height: 35px;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 3px;
+    }
+
+    .slider-controls button {
+        width: 30px;
+        height: 30px;
+        font-size: 0.8rem;
+    }
+
 
     .main-product-card .product-info {
         width: 100%;
@@ -2110,6 +2156,7 @@ footer {
     }
 
     .faq-question span {
+        font-size: 0.9rem;
         margin-right: 1px;
     }
 

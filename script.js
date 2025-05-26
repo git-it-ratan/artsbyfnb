@@ -142,7 +142,7 @@ document.fonts.ready.then(() => {
         scaleX: 0,
         x: -10,
         TransformOrigin: "left",
-        stagger: 0.1
+        stagger: 0.5
     });
 });
 
@@ -193,49 +193,54 @@ window.addEventListener('load', function () {
 const products = [
     {
         name: 'Mini Album',
-        image: 'images/Mini album.jpg',
+        images: ['images/Mini album.jpg',
+            'images/AestFlora.png',
+            'images/Mini album.jpg',
+        ],
         description: 'A compact and charming photo album perfect for preserving your cherished memories. Handcrafted with love, this mini album features decorative elements and space for your favorite snapshots.',
         price: '500₹'
     },
     {
         name: 'Large Album',
-        image: 'images/Large album.jpg',
+        images: ['images/Large album.jpg', 
+            'images/Large album.jpg', 
+            'images/Large album.jpg'],
         description: 'Our signature photo album with ample space for all your precious moments. Beautifully designed with premium materials and intricate details, this album becomes a treasured keepsake for generations.',
         price: '1000₹'
     },
     {
         name: 'Handwritten Letter',
-        image: 'images/Handwritten letter.jpg',
+        images: ['images/Handwritten letter.jpg','images/Handwritten letter.jpg','images/Handwritten letter.jpg'],
         description: 'Express your feelings with our beautifully crafted handwritten letters. Each letter is personally penned with elegant calligraphy and decorated with artistic touches to make your message truly special.',
         price: '200₹'
     },
     {
         name: 'Phone Case',
-        image: 'images/Phone case.jpg',
+        images: ['images/Phone case.jpg','images/Phone case.jpg','images/Phone case.jpg'],
         description: 'Protect your phone in style with our customized phone cases. Each case features unique handcrafted designs and durable protection while adding a personal touch to your device.',
         price: '800₹'
     },
     {
         name: 'Small Frame',
-        image: 'images/Small frame.jpg',
+        images: ['images/Small frame.jpg','images/Small frame.jpg','images/Small frame.jpg'],
         description: 'Elegant handcrafted frames perfect for displaying your favorite moments. Each frame is carefully decorated with intricate details to complement your cherished photos or artwork.',
         price: '300₹'
     },
     {
         name: 'Message Jars',
-        image: 'images/Message jars.jpg',
+        images: ['images/Message jars.jpg','images/Message jars.jpg','images/Message jars.jpg'],
         description: 'A collection of heartfelt messages in a beautifully decorated jar. Each jar contains handwritten notes of love, inspiration, or gratitude, making it a perfect gift for someone special.',
         price: '400₹'
     },
     {
         name: 'Polaroid Hamper',
-        image: 'images/Polaroid Hamper.jpg',
+        images: ['images/Polaroid Hamper.jpg','images/Polaroid Hamper.jpg','images/Polaroid Hamper.jpg'],
         description: 'A luxurious gift hamper featuring instant photos and handcrafted decorative elements. This premium collection includes customized polaroids arranged in an aesthetically pleasing presentation.',
         price: '1500₹'
     },
     {
         name: 'BookMark',
-        image: 'images/BookMark.jpg',
+        images: ['images/BookMark.jpg','images/BookMark.jpg','images/BookMark.jpg'],
         description: 'Handcrafted bookmarks that add a touch of elegance to your reading experience. Each bookmark is uniquely designed with artistic elements and durable materials for long-lasting use.',
         price: '100₹'
     }
@@ -252,8 +257,13 @@ function initializeProducts() {
 
     slider.innerHTML = '';
     mainProduct.innerHTML = `
-        <div class="product-image">
-            <img id="mainProductImage" src="" alt="Product Image">
+        <div class="product-image-slider">
+        
+        <img id="mainProductImage" src="" alt="Product Image">
+        <div class="slider-controls">
+        <button class="main-img-prev">&lt;</button>
+        <button class="main-img-next">&gt;</button>
+        </div>
         </div>
         <div class="product-info">
             <h2 id="mainProductName"></h2>
@@ -268,7 +278,7 @@ function initializeProducts() {
         thumb.className = 'product-thumb';
         thumb.innerHTML = `
             <h3>${product.name}</h3>
-            <img src="${product.image}" alt="${product.name}">
+            <img src="${product.images[0]}" alt="${product.name}">
         `;
         thumb.addEventListener("click", () => {
             updateMainProduct(product);
@@ -282,17 +292,36 @@ function initializeProducts() {
 }
 
 function updateMainProduct(product) {
+    let currentImgIndex = 0;
     const mainImage = document.getElementById("mainProductImage");
     const mainName = document.getElementById("mainProductName");
     const mainDesc = document.getElementById("mainProductDesc");
     const mainPrice = document.getElementById("mainProductPrice");
     const orderBtn = document.getElementById("mainOrderBtn");
+    const prevBtn = document.querySelector('.main-img-prev');
+    const nextBtn = document.querySelector('.main-img-next');
 
-    if (mainImage) mainImage.src = product.image;
+    function showImage(idx){
+        mainImage.src = product.images[idx];
+    }
+    showImage(currentImgIndex);
+
+    if (mainImage) mainImage.src = product.images[currentImgIndex];
     if (mainName) mainName.textContent = product.name;
     if (mainDesc) mainDesc.textContent = product.description;
     if (mainPrice) mainPrice.textContent = product.price;
     if (orderBtn) orderBtn.setAttribute("data-product", product.name);
+
+    if(prevBtn && nextBtn){
+        prevBtn.onclick = () => {
+            currentImgIndex = (currentImgIndex - 1 + product.images.length) % product.images.length;
+            showImage(currentImgIndex);
+        };
+        nextBtn.onclick = () => {
+            currentImgIndex = (currentImgIndex + 1) % product.images.length;
+            showImage(currentImgIndex);
+        };
+    }
     orderBtn.addEventListener("click", function () {
         let productName = this.getAttribute("data-product");
         sendMessage(productName);
@@ -336,7 +365,6 @@ function sendMessage(productName) {
     let message = `Hey! I want to buy ${productName}`;
     let encodedMessage = encodeURIComponent(message);
     let instaLink = `https://www.instagram.com/direct/t/17847653325279516/?text=${encodedMessage}`;
-
     window.open(instaLink, "_blank");
 }
 
