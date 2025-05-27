@@ -195,7 +195,7 @@ const products = [
             'images/Mini album.jpg',
         ],
         description: 'A compact and charming photo album perfect for preserving your cherished memories. Handcrafted with love, this mini album features decorative elements and space for your favorite snapshots.',
-        price: '500₹'
+        price: '499₹'
     },
     {
         name: 'Large Album',
@@ -209,19 +209,19 @@ const products = [
         name: 'Handwritten Letter',
         images: ['images/Handwritten letter.jpg','images/Handwritten letter.jpg','images/Handwritten letter.jpg'],
         description: 'Express your feelings with our beautifully crafted handwritten letters. Each letter is personally penned with elegant calligraphy and decorated with artistic touches to make your message truly special.',
-        price: '200₹'
+        price: '169₹'
     },
     {
         name: 'Phone Case',
         images: ['images/Phone case.jpg','images/Phone case.jpg','images/Phone case.jpg'],
         description: 'Protect your phone in style with our customized phone cases. Each case features unique handcrafted designs and durable protection while adding a personal touch to your device.',
-        price: '800₹'
+        price: '499₹'
     },
     {
         name: 'Small Frame',
         images: ['images/Small frame.jpg','images/Small frame.jpg','images/Small frame.jpg'],
         description: 'Elegant handcrafted frames perfect for displaying your favorite moments. Each frame is carefully decorated with intricate details to complement your cherished photos or artwork.',
-        price: '300₹'
+        price: '299₹'
     },
     {
         name: 'Message Jars',
@@ -233,13 +233,13 @@ const products = [
         name: 'Polaroid Hamper',
         images: ['images/Polaroid Hamper.jpg','images/Polaroid Hamper.jpg','images/Polaroid Hamper.jpg'],
         description: 'A luxurious gift hamper featuring instant photos and handcrafted decorative elements. This premium collection includes customized polaroids arranged in an aesthetically pleasing presentation.',
-        price: '1500₹'
+        price: '269₹'
     },
     {
         name: 'BookMark',
         images: ['images/BookMark.jpg','images/BookMark.jpg','images/BookMark.jpg'],
         description: 'Handcrafted bookmarks that add a touch of elegance to your reading experience. Each bookmark is uniquely designed with artistic elements and durable materials for long-lasting use.',
-        price: '100₹'
+        price: '99₹ / Customized 149₹'
     }
 ]
 
