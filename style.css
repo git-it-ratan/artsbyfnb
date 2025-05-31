@@ -25,7 +25,8 @@ body {
 
 :root {
     --bg-color: #ffd6ee;
-    /* F2DBEB 84592b ffb7ea hgc d8a5fb EFA8B8 f7ece1*/
+    --linear: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
+    /* F2DBEB 84592b ffb7ea hgc d8a5fb EFA8B8 f7ece1 ffd6ee*/
     --wood-clr: #f2dbeb;
     /* d7bba8 */
     --text-color: #070a13;
@@ -481,7 +482,7 @@ section:not(.parallax) {
 .sec {
     width: 98%;
     height: 96vh;
-    background-color: var(--bg-color);
+    background-image: var(--linear);
     /* background-color: aquamarine; */
     position: relative;
     border-radius: 20px;
@@ -664,6 +665,7 @@ section:not(.parallax) {
     display: grid;
     grid-template-rows: auto auto;
     gap: 2rem;
+    transition: all 0.3s ease-in-out;
     /* padding: 2rem; */
     /* background-color: aqua; */
 }
@@ -743,7 +745,7 @@ section:not(.parallax) {
 
 .main-product-card .product-info h3 {
     font-size: 2.4rem;
-    height: 50px;
+    height: 100px;
     font-family: "Poppins", serif;
 }
 
@@ -894,7 +896,7 @@ section:not(.parallax) {
     width: 300px;
     height: 100px;
     background-color: var(--text-color);
-    color: var(--bg-color);
+    color: #ffd6ee;
     border: none;
     border-radius: 20px;
     font-size: 1.4rem;
@@ -1097,7 +1099,6 @@ footer {
     gap: 2rem;
     padding: 10px 0;
     justify-content: space-around;
-    color: var(--bg-color);
     margin-bottom: 20px;
 }
 
@@ -1136,7 +1137,7 @@ footer {
 }
 
 .footer-section h3 {
-    color: var(--bg-color);
+    color: #ffd6ee;
     font-family: "Bona Nova", serif;
     font-size: 1.3rem;
     letter-spacing: 2px;
@@ -1150,7 +1151,6 @@ footer {
 
 .footer-section ul li {
     font-size: 1.02rem;
-    color: var(--bg-color);
     font-family: "Poppins", sans-serif;
     margin-bottom: 10px;
 }
@@ -1158,7 +1158,7 @@ footer {
 .footer-section ul li a {
     letter-spacing: 2px;
     text-decoration: none;
-    color: var(--bg-color);
+    color: #ffd6ee;
     font-family: "Poppins", sans-serif;
     transition: all 0.3s ease;
 }
@@ -1199,12 +1199,12 @@ footer {
 .footer-brand-details .brand-name h2 {
     font-size: 5rem;
     font-family: "Bona Nova", serif;
-    color: var(--bg-color);
+    color: #ffd6ee;
 }
 
 .footer-brand-details .brand-name p {
     font-size: 0.8rem;
-    color: var(--bg-color);
+    color: #ffd6ee;
     font-family: "Poppins", sans-serif;
     margin-top: 10px;
 }
@@ -1291,7 +1291,7 @@ footer {
     outline: none;
     transform: scale(1.05);
     background-color: var(--text-color);
-    color: var(--bg-color);
+    color: #ffd6ee;
 }
 
 .card__form input::placeholder {
@@ -1299,7 +1299,7 @@ footer {
 }
 
 .card__form input:focus::placeholder {
-    color: var(--bg-color);
+    color: #ffd6ee;
 }
 
 .card__button {
@@ -2005,12 +2005,6 @@ footer {
         grid-template-columns: 1fr;
         gap: 1rem;
     }
-
-    .main-product-card img {
-        width: 100%;
-        height: 100%;
-    }
-
     .slider-controls {
         width: calc(100% - 24px);
         height: 35px;
@@ -2027,6 +2021,9 @@ footer {
         font-size: 0.8rem;
     }
 
+    .product-image-slider img {
+        height: 60%;
+    }
 
     .main-product-card .product-info {
         width: 100%;
@@ -2037,6 +2034,11 @@ footer {
 
     .main-product-card .product-info p {
         font-size: 1rem;
+        width: 100%;
+        height: 150px;
+    }
+    .main-product-card .product-info h3 {
+        font-size: 2rem;
         width: 100%;
     }
 

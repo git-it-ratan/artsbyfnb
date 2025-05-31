@@ -130,15 +130,15 @@ document.fonts.ready.then(() => {
     gsap.from(split.chars, {
         scrollTrigger: {
             trigger: split.chars,
-            start: "top 90%",
+            start: "top 80%",
             end: "top 30%",
             scrub: true,
             markers: false
         },
         scaleX: 0,
         x: -10,
-        TransformOrigin: "left",
-        stagger: 0.5
+        TransformOrigin: "top",
+        stagger: 1
     });
 });
 
